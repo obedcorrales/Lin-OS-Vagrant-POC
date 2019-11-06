@@ -1,0 +1,16 @@
+#! /usr/bin/env bash
+
+# DESCRIPTION
+# Configures server defaults.
+
+# EXECUTION
+# printf "Setting hostname...\n"
+# printf "$SERVER_HOSTNAME\n" > /etc/hostname
+# hostname -F /etc/hostname
+
+# printf "Updating hosts...\n"
+# printf "$SERVER_IP $SERVER_HOSTNAME $SERVER_HOSTNAME\n" >> /etc/hosts
+# hostname -f
+
+printf "Setting UTC timezone...\n"
+ln -sf /usr/share/zoneinfo/UTC /etc/localtime
