@@ -80,8 +80,6 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # SHELL
 
   # Shell provisioning.
-  # config.vm.provision :shell, path: "vagrant/provisioning/root_bootstrap.sh"
-  config.vm.provision :shell, path: "vagrant/provisioning/bin/run", args: "provisionAsRoot"
-  config.vm.provision :shell, path: "vagrant/provisioning/bin/run", args: "setupAsVagrant", privileged: false
-  # config.vm.provision :shell, path: "vagrant/provisioning/user_bootstrap.sh", privileged: false
+  config.vm.provision :shell, path: "vagrant/bin/run", args: "provisionAsRoot"
+  config.vm.provision :shell, path: "vagrant/bin/run", args: "setupAsVagrant", privileged: false
 end

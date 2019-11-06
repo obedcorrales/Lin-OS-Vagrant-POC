@@ -3,7 +3,7 @@
 # DESCRIPTION
 # Executes the command line interface.
 
-cd /vagrant/vagrant/provisioning
+cd /vagrant/vagrant
 
 # SETTINGS
 source settings/settings.sh
