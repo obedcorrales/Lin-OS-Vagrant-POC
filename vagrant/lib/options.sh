@@ -8,26 +8,21 @@
 # $1 = The option to process.
 process_option() {
   case $1 in
-    'd'|'defaults')
-      bin/apply_defaults;;
-    'p'|'provisionAsRoot')
+    'provisionAsRoot')
       bin/apply_defaults
       bin/install_root_packages;;
-    's'|'setupAsVagrant')
-      bin/setup_vagrant_environment;;
-    'u')
-      bin/configure_users;;
-    'f')
-      bin/finalize_setup;;
-    'r')
+    'setupAsVagrant')
+      bin/setup_vagrant_environment
+      bin/update_node;;
+    'n'|'N')
+      bin/update_node;;
+    # 'u')
+    #   bin/configure_users;;
+    # 'f')
+    #   bin/finalize_setup;;
+    'r'|'R')
       shutdown -r now;;
-    # 'i')
-    #   bin/apply_defaults
-    #   bin/install_root_packages
-    #   bin/configure_users
-    #   bin/finalize_setup
-    #   shutdown -r now;;
-    'q');;
+    'q'|'Q');;
     *)
       printf "ERROR: Invalid option.\n";;
   esac

@@ -5,7 +5,7 @@
 
 # EXECUTION
 # Initialization
-echo "Root Provisioning (as '$USER' user)"
+printf "\n=== Root Provisioning (as '$USER' user) ===\n\n"
 $INSTALL_COMMAND update
 $INSTALL_COMMAND upgrade
 

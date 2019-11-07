@@ -16,4 +16,5 @@ IFS=$'\n\t' # Defines how Bash splits words and iterates arrays. This defines ne
 # export USER_LOGIN=app # The master user for automated tasks, deployments, app management, etc.
 # export USER_PASS=password # The master user password.
 # export INSTALL_COMMAND="apt-get"
+export NODE_VERSION=12.13.0 # Node version to use in development environment
 export INSTALL_COMMAND="apt-get -q -y"

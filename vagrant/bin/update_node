@@ -1,0 +1,22 @@
+#! /usr/bin/env bash
+
+# DESCRIPTION
+# Update node to latest set version using NVM
+
+# EXECUTION
+# Initialization
+printf "\n=== Update Node to approved version ===\n\n"
+cd /home/vagrant
+
+# Initialize NVM
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# Install Node and NPM
+nvm install $NODE_VERSION
+nvm alias default $NODE_VERSION
+
+# TODO
+# look up current Node version
+# If different from approved version, move packages to new version
